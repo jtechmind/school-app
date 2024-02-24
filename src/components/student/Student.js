@@ -5,7 +5,7 @@ function Student() {
   const [studentData, setStudentData] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:8080/school/students")
+      .get("http://localhost:8080/api/v1/student/")
       .then((response) => setStudentData(response.data))
       .catch((error) =>
         console.error("Error while loading student data", error)
@@ -13,9 +13,8 @@ function Student() {
   }, []);
   return (
     <ol>
-      123
       {studentData.map((student) => (
-        <li key={student._id}>{student.firstName}</li>
+        <li key={student._id}>{student.firstName + " " + student.lastName}</li>
       ))}
     </ol>
   );
