@@ -13,6 +13,9 @@ function Header() {
           </h1>
         </Link>
         <ul className="flex gap-4">
+          <Link to={"/courses"}>
+            <li className="">Courses</li>
+          </Link>
           <Link to={"/sign-in"}>
             <li className="">SignIn</li>
           </Link>
